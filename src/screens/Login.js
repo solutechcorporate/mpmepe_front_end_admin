@@ -6,6 +6,7 @@ import Input from "../components/InputForm";
 import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 import {eye} from 'react-icons-kit/feather/eye'
 import "../App.css"
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -18,6 +19,12 @@ const Login = () => {
         const [visible, setVisible] = useState(false);
         const [isValidPassword, setIsValidPassword] = useState(false)
 	const [isValidPasswordConf, setIsValidPasswordConf] = useState(false)
+
+    const navigate = useNavigate();
+
+      const handleRedirect = () => {
+        navigate("/home")
+      }
 
         const handleToggle = () => {
 			if (!visible){
@@ -132,7 +139,7 @@ const handleInput = (e) => {
                     <div className="row d-flex justify-content-between">
                         <div className="col-lg-12 col-md-12">
                             <div className="form-group">
-                                <button className="btn-block btn-md" style={{ background: "#0303A8", borderColor:"#0303A8", fontSize: 10}}>Se connecter</button>
+                                <button className="btn-block btn-md" style={{ background: "#0303A8", borderColor:"#0303A8", fontSize: 10}} onClick={() => handleRedirect()}>Se connecter</button>
                             </div>
                         </div>
                         </div>

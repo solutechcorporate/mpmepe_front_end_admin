@@ -12,11 +12,11 @@ const SideBar = () => {
                             <div className="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">General</div>
                             <ul className="pcoded-item pcoded-left-item">
                                 <li className="active">
-                                    <a href="/">
+                                    <Link to="/home">
                                         <span className="pcoded-micon"><i className="ti-home"></i><b>D</b></span>
                                         <span className="pcoded-mtext" data-i18n="nav.dash.main">Accueil</span>
                                         <span className="pcoded-mcaret"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="">
                                     <Link to="/articles">
@@ -175,6 +175,11 @@ const SideBar = () => {
                                         <span className="pcoded-mtext" data-i18n="nav.menu-levels.main">Gestion des utilisateurs</span>
                                         <span className="pcoded-mcaret"></span>
                                     </Link>
+                                </li>
+                                <li style={{ marginBottom: 60, padding: "30px"}}>
+                                    <button type="submit" className="btn-block btn-danger">
+                                        Deconnexion
+                                    </button>
                                 </li>
                             </ul>
                         </div>

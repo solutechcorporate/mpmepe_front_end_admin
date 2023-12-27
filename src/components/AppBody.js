@@ -7,12 +7,6 @@ import Footer from './Footer';
 const AppBody = ({ children }) => {
     return (
       <>
-          {/* <!-- Pre-loader start --> */}
-      <div className="theme-loader">
-      <div className="loader-track">
-          <div className="loader-bar"></div>
-      </div>
-      </div>
     {/* <!-- Pre-loader end --> */}
     <div id="pcoded" className="pcoded">
         <div className="pcoded-overlay-box"></div>
